@@ -1,0 +1,219 @@
+/* Variáveis de Cores - Premium Dark Mode (Foco em Profundidade e Elegância) */
+:root {
+    /* Fundo profundo mas com nuance grafite - evita o aspecto amador do preto absoluto */
+    --bg-color: #0b0d11; 
+    
+    /* Tom dos botões e elementos (cria camadas visuais sobre o fundo) */
+    --btn-bg: #14171f;
+    --btn-bg-hover: #1c212c;
+    
+    /* Hierarquia de Textos */
+    --text-color: #ffffff;
+    --text-secondary: #9aa5b5; /* Cinza suave para a bio e elementos secundários */
+    
+    /* Dourado Sophistication do Canal */
+    --gold-accent: #dcb36b;
+    --gold-border-glow: rgba(220, 179, 107, 0.4);
+    --gold-shadow-glow: rgba(220, 179, 107, 0.15);
+}
+
+/* Configurações Globais - Fonte Limpa e Moderna */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    padding: 1.5rem 1rem;
+}
+
+/* Barra de Navegação Superior (Header) */
+.top-nav {
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    justify-content: flex-end; /* Alinha o botão de compartilhar à direita, conforme seu HTML */
+    padding: 0.75rem 1rem;
+    position: absolute;
+    top: 0;
+}
+
+.top-nav-icon {
+    background-color: var(--btn-bg);
+    color: var(--text-color);
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    cursor: pointer;
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    transition: all 0.2s ease;
+}
+
+.top-nav-icon:hover {
+    background-color: var(--btn-bg-hover);
+    transform: scale(1.05);
+}
+
+/* Perfil - Centralizado */
+.profile-container {
+    text-align: center;
+    margin-top: 5rem;
+    margin-bottom: 2.5rem;
+    max-width: 450px;
+}
+
+.profile-pic {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1.25rem;
+    border: 2px solid var(--gold-accent); /* Borda dourada integrada ao logo */
+    box-shadow: 0 10px 25px var(--gold-shadow-glow); /* Brilho traseiro sutil */
+}
+
+.profile-name {
+    font-size: 1.65rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.3px;
+}
+
+.profile-bio {
+    font-size: 0.98rem;
+    line-height: 1.6;
+    max-width: 380px;
+    margin: 0 auto;
+    margin-bottom: 1.5rem;
+    color: var(--text-secondary); /* Texto mais suave para melhor hierarquia */
+}
+
+/* Ícone do YouTube */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0.5rem;
+}
+
+.social-icon-link {
+    color: var(--text-color);
+    font-size: 1.8rem;
+    text-decoration: none;
+    transition: all 0.25s ease;
+    opacity: 0.8;
+}
+
+.social-icon-link:hover {
+    transform: translateY(-2px);
+    color: #ff0000;
+    opacity: 1;
+}
+
+/* Links Container */
+.links-container {
+    width: 100%;
+    max-width: 450px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* Botão Principal Estilizado */
+.link-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 1.15rem 1.25rem;
+    background-color: var(--btn-bg);
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 600;
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    border-radius: 12px; /* Cantos arredondados modernos */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    font-size: 1.05rem;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+}
+
+.link-btn-text {
+    flex-grow: 1;
+    text-align: center;
+    padding-left: 1.5rem; /* Compensa o ícone da direita mantendo o texto perfeitamente no centro */
+}
+
+.link-btn-icon {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    opacity: 0.6;
+}
+
+.link-btn:hover {
+    background-color: var(--btn-bg-hover);
+    border-color: var(--gold-border-glow); /* Acende sutilmente em dourado ao passar o mouse */
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3), 0 0 12px rgba(220, 179, 107, 0.05);
+}
+
+/* --- ESTILOS ADICIONADOS PARA WHATSAPP E FOOTER --- */
+
+/* Botão sutil e flutuante do WhatsApp */
+.whatsapp-float {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background-color: var(--btn-bg);
+    color: var(--text-color);
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    text-decoration: none;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+    transition: all 0.25s ease;
+    z-index: 1000;
+}
+
+.whatsapp-float:hover {
+    background-color: #25D366; /* Torna-se verde apenas no hover */
+    border-color: #25D366;
+    transform: scale(1.08) translateY(-2px);
+}
+
+/* Rodapé Elegante */
+.footer-container {
+    margin-top: auto; /* Garante que o rodapé vá para o final da página */
+    padding-top: 5rem;
+    padding-bottom: 1rem;
+    text-align: center;
+    width: 100%;
+}
+
+.footer-container p {
+    font-size: 0.8rem;
+    color: #4a525d; /* Cinza grafite sutil para fundir discretamente ao layout */
+    letter-spacing: 0.3px;
+}
+
+.footer-container p strong {
+    color: #6c7684;
+    font-weight: 500;
+}

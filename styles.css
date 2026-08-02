@@ -133,15 +133,15 @@ body {
     cursor: pointer;
 }
 
-/* Imagens Thumbnails dos Produtos */
+/* Tamanho corrigido para as thumbnails não ficarem gigantes */
 .btn-thumb {
-    width: 48px;
-    height: 52px;
-    object-fit: contain;
-    border-radius: 6px;
-    margin-right: 12px;
-    background-color: rgba(255, 255, 255, 0.02);
-    padding: 2px;
+    width: 50px !important;       /* Largura fixa pequena */
+    height: 65px !important;      /* Altura proporcional */
+    max-width: 50px !important;
+    object-fit: contain;          /* Garante que a imagem não distorça */
+    border-radius: 4px;
+    margin-right: 15px;           /* Espaço entre a imagem e o texto */
+    flex-shrink: 0;               /* Impede que a imagem encolha ou cresça desproporcionalmente */
 }
 
 /* Destaque Ouro para o Livro Grátis */

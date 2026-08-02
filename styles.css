@@ -41,7 +41,7 @@ body {
     width: 100%;
     max-width: 600px;
     display: flex;
-    justify-content: flex-end; /* Alinha o botão de compartilhar à direita, conforme seu HTML */
+    justify-content: flex-end;
     padding: 0.75rem 1rem;
     position: absolute;
     top: 0;
@@ -70,8 +70,8 @@ body {
 /* Perfil - Centralizado */
 .profile-container {
     text-align: center;
-    margin-top: 5rem;
-    margin-bottom: 2.5rem;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
     max-width: 450px;
 }
 
@@ -98,7 +98,7 @@ body {
     max-width: 380px;
     margin: 0 auto;
     margin-bottom: 1.5rem;
-    color: var(--text-secondary); /* Texto mais suave para melhor hierarquia */
+    color: var(--text-secondary);
 }
 
 /* Ícone do YouTube */
@@ -128,7 +128,25 @@ body {
     max-width: 450px;
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Badge de Destaque */
+.badge-container {
+    width: 100%;
+    text-align: left;
+    padding-left: 0.25rem;
+}
+
+.badge {
+    display: inline-block;
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: var(--gold-accent);
+    letter-spacing: 1px;
+    margin-bottom: 4px;
+    text-transform: uppercase;
 }
 
 /* Botão Principal Estilizado */
@@ -142,33 +160,61 @@ body {
     color: var(--text-color);
     text-decoration: none;
     font-weight: 600;
-    border: 1px solid rgba(255, 255, 255, 0.04);
-    border-radius: 12px; /* Cantos arredondados modernos */
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     font-size: 1.05rem;
     transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
     cursor: pointer;
 }
 
-.link-btn-text {
+/* Destaque para o botão de produto com borda e glow dourado */
+.featured-btn {
+    border: 1px solid var(--gold-border-glow);
+    box-shadow: 0 4px 15px var(--gold-shadow-glow);
+}
+
+.link-btn-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
     flex-grow: 1;
-    text-align: center;
+    padding-right: 1rem;
+}
+
+.link-btn-title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text-color);
+}
+
+.link-btn-subtext {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    margin-top: 4px;
+    font-weight: 400;
+    line-height: 1.3;
 }
 
 .link-btn-icon {
-    color: var(--text-secondary);
-    font-size: 0.9rem;
-    opacity: 0.6;
+    color: var(--gold-accent);
+    font-size: 1.1rem;
+    opacity: 0.8;
+    transition: transform 0.25s ease;
 }
 
 .link-btn:hover {
     background-color: var(--btn-bg-hover);
-    border-color: var(--gold-border-glow); /* Acende sutilmente em dourado ao passar o mouse */
+    border-color: var(--gold-accent);
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3), 0 0 12px rgba(220, 179, 107, 0.05);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4), 0 0 15px var(--gold-shadow-glow);
 }
 
-/* --- ESTILOS ADICIONADOS PARA WHATSAPP E FOOTER --- */
+.link-btn:hover .link-btn-icon {
+    transform: translateX(3px);
+    opacity: 1;
+}
 
 /* Botão sutil e flutuante do WhatsApp */
 .whatsapp-float {
@@ -192,15 +238,15 @@ body {
 }
 
 .whatsapp-float:hover {
-    background-color: #25D366; /* Torna-se verde apenas no hover */
+    background-color: #25D366;
     border-color: #25D366;
     transform: scale(1.08) translateY(-2px);
 }
 
 /* Rodapé Elegante */
 .footer-container {
-    margin-top: auto; /* Garante que o rodapé vá para o final da página */
-    padding-top: 5rem;
+    margin-top: auto;
+    padding-top: 4rem;
     padding-bottom: 1rem;
     text-align: center;
     width: 100%;
@@ -208,7 +254,7 @@ body {
 
 .footer-container p {
     font-size: 0.8rem;
-    color: #4a525d; /* Cinza grafite sutil para fundir discretamente ao layout */
+    color: #4a525d;
     letter-spacing: 0.3px;
 }
 
